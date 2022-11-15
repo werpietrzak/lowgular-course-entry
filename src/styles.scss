@@ -17,3 +17,19 @@
   }
 }
 
+.employee-photos {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+
+    & img {
+      width: 150px;
+    }
+  }
+}
+
