@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+.employee-list {
+  &__table {
+    border-collapse: collapse;
+
+    & td, th {
+      border: 1px solid black;
+      border-collapse: collapse;
+      width: 200px;
+      padding: 5px;
+
+      &:first-child {
+        width: 50px;
+      }
+    }
+  }
+}
+
