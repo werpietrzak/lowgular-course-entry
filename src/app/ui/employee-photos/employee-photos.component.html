@@ -1,6 +1,6 @@
 <div class="employee-photos" *ngIf="data$ | async as data; else empty">
   <div class="employee-photos__item" *ngFor="let employee of data">
-    <img src="{{employee.image}}" alt="{{employee.name}}" />
+    <img [src]="employee.img" alt="{{employee.name}}" />
     <span>{{ employee.name }}</span>
   </div>
 </div>

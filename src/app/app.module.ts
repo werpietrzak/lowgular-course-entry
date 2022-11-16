@@ -4,7 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeeListComponentModule } from "./ui/employee-list/employee-list.component-module";
-import {EmployeePhotosComponentModule} from "./ui/employee-photos/employee-photos.component-module";
+import { EmployeePhotosComponentModule } from "./ui/employee-photos/employee-photos.component-module";
+import { EmployeeServiceModule } from "./services/employee.service-module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,6 +15,7 @@ import {EmployeePhotosComponentModule} from "./ui/employee-photos/employee-photo
         HttpClientModule,
         EmployeeListComponentModule,
         EmployeePhotosComponentModule,
+        EmployeeServiceModule,
     ],
   providers: [],
   bootstrap: [AppComponent],
