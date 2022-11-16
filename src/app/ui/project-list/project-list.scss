@@ -1,15 +1,19 @@
-.employee-list {
+.project-list {
   &__table {
     border-collapse: collapse;
 
     & td, th {
       border: 1px solid white;
       border-collapse: collapse;
-      width: 200px;
-      padding: 5px;
+      width: 150px;
+      padding: 5px 10px;
 
       &:first-child {
-        width: 50px;
+        width: 40px;
+      }
+
+      &:last-child {
+        width: 300px;
       }
     }
 

@@ -5,7 +5,7 @@ import {
 } from '@angular/core';
 import { Observable } from 'rxjs';
 import { EmployeeModel } from '../../model/employee.model';
-import { EmployeeService } from "../../services/employee.service";
+import { EmployeeService } from "../../services/employee/employee.service";
 
 @Component({
   selector: 'employee-list',
