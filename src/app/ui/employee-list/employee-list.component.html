@@ -3,11 +3,17 @@
     <th>Id</th>
     <th>Name</th>
     <th>Email</th>
+    <th>Options</th>
   </tr>
   <tr *ngFor="let employee of data">
     <td>{{ employee.personalNumber }}</td>
     <td>{{ employee.name }}</td>
     <td>{{ employee.mail }}</td>
+    <td>
+      <button (click)="deleteEmployee(employee.personalNumber)">
+        Delete
+      </button>
+    </td>
   </tr>
 </table>
 

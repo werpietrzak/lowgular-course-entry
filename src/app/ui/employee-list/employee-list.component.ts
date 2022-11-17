@@ -15,5 +15,14 @@ import { EmployeeService } from "../../services/employee/employee.service";
 })
 export class EmployeeListComponent {
   constructor(private _employeeService: EmployeeService) {}
+
   data$: Observable<EmployeeModel[] | null> = this._employeeService.getAll();
+
+  deleteEmployee(id: string) {
+    this._employeeService.deleteEmployee(id, {observe: 'response'}).subscribe(response => {
+      if (response.status === 200) {
+        alert('User was successfully removed');
+      }
+    });
+  }
 }

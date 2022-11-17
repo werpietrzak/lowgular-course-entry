@@ -14,4 +14,8 @@ export class EmployeeService {
   createNewEmployee(employeeData: NewEmployeeModel, config?: any): Observable<any> {
     return this._httpClient.post('https://dummy.restapiexample.com/api/v1/create', employeeData, config);
   }
+
+  deleteEmployee(id: string, config?: any): Observable<any> {
+    return this._httpClient.delete(`https://dummy.restapiexample.com/api/v1/delete/${id}`, config);
+  }
 }
