@@ -1,14 +1,25 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { EmployeeModel, NewEmployeeModel } from "../../model/employee.model";
-import { Observable } from "rxjs";
+import { EmployeeApiModel, EmployeeModel, NewEmployeeModel } from "../../model/employee.model";
+import { map, Observable } from "rxjs";
+import { ApiResponse } from "../api.response";
 
 @Injectable()
 export class EmployeeService {
   constructor(private _httpClient: HttpClient) {}
 
   getAll(): Observable<EmployeeModel[]> {
-    return this._httpClient.get<EmployeeModel[]>('/assets/data/people.json');
+    return this._httpClient.get<ApiResponse<EmployeeApiModel[]>>('https://dummy.restapiexample.com/api/v1/employees')
+      .pipe(map((response: ApiResponse<EmployeeApiModel[]>) => {
+        return response.data.map((employee: EmployeeApiModel): EmployeeModel => {
+          return {
+            personalNumber: String(employee.id),
+            name: employee.employee_name,
+            mail: `${employee.employee_name.toLowerCase().replace(" ", "")}@lowgular.io`,
+            img: employee.profile_image,
+          }
+        })
+      }));
   }
 
   createNewEmployee(employeeData: NewEmployeeModel, config?: any): Observable<any> {

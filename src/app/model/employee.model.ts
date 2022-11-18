@@ -10,3 +10,11 @@ export interface NewEmployeeModel {
   age: number;
   salary: number;
 }
+
+export interface EmployeeApiModel {
+  id: number;
+  employee_name: string;
+  employee_salary: number;
+  employee_age: number;
+  profile_image: string;
+}
