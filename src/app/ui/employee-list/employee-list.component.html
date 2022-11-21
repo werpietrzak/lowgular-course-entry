@@ -10,7 +10,9 @@
     <td>{{ employee.name }}</td>
     <td>{{ employee.mail }}</td>
     <td>
-      <button (click)="deleteEmployee(employee.personalNumber)">
+      <button
+        class="btn btn-outline-secondary btn-sm"
+        (click)="deleteEmployee(employee.personalNumber)">
         Delete
       </button>
     </td>

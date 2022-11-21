@@ -3,7 +3,6 @@
     border-collapse: collapse;
 
     & td, th {
-      border: 1px solid white;
       border-collapse: collapse;
       width: 150px;
       padding: 5px 10px;
@@ -15,14 +14,6 @@
       &:last-child {
         width: 300px;
       }
-    }
-
-    & th {
-      background-color: cadetblue;
-    }
-
-    & td {
-      background-color: aliceblue;
     }
   }
 }

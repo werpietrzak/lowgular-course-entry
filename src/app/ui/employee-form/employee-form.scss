@@ -3,8 +3,9 @@
 
   &__form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    width: 525px;
+    width: 300px;
+    height: 150px;
   }
 }

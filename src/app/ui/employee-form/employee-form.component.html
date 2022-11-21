@@ -3,9 +3,15 @@
     <input type="text" placeholder="Name" formControlName="name" />
     <input type="number" placeholder="Age" formControlName="age" />
     <input type="number" placeholder="Salary" formControlName="salary" />
-    <button type="submit" [disabled]="employeeForm.invalid">Submit</button>
+    <button
+      type="submit"
+      class="btn btn-outline-secondary btn-sm"
+      [disabled]="employeeForm.invalid"
+    >
+      Submit
+    </button>
   </form>
-  <p *ngIf="employeeForm.valid">
-    Your new employee: {{ employeeForm.value.name }}, age: {{ employeeForm.value.age }}, with salary ${{ employeeForm.value.salary }} will be added to the system.
-  </p>
 </div>
+<p *ngIf="employeeForm.valid">
+  Your new employee: {{ employeeForm.value.name }}, age: {{ employeeForm.value.age }}, with salary ${{ employeeForm.value.salary }} will be added to the system.
+</p>
