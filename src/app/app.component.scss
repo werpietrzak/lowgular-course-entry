@@ -14,4 +14,23 @@
     height: auto;
     padding: 20px;
   }
+
+  &__footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: silver;
+  }
+}
+
+.navbar {
+  bottom: 0;
+  width: 100vw;
+  padding: 20px;
+  background: none !important;
+}
+
+.container {
+  min-height: 100vh;
 }
