@@ -18,3 +18,8 @@ export interface EmployeeApiModel {
   employee_age: number;
   profile_image: string;
 }
+
+export interface EmployeeDetailsParamsModel {
+  id: string;
+  name: string;
+}
