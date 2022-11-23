@@ -22,6 +22,16 @@ export class EmployeeService {
       }));
   }
 
+  getOne(id: string): Observable<EmployeeModel> {
+    return this._httpClient.get<ApiResponse<EmployeeApiModel>>(`https://dummy.restapiexample.com/api/v1/employee/${id}`)
+      .pipe(map((response: ApiResponse<EmployeeApiModel>): EmployeeModel => ({
+        personalNumber: String(response.data.id),
+        name: response.data.employee_name,
+        mail: `${response.data.employee_name.toLowerCase().replace(" ", "")}@lowgular.io`,
+        img: response.data.profile_image,
+      })));
+  }
+
   createNewEmployee(employeeData: NewEmployeeModel, config?: any): Observable<any> {
     return this._httpClient.post('https://dummy.restapiexample.com/api/v1/create', employeeData, config);
   }

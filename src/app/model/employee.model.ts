@@ -21,5 +21,4 @@ export interface EmployeeApiModel {
 
 export interface EmployeeDetailsParamsModel {
   id: string;
-  name: string;
 }
